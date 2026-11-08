@@ -64,8 +64,7 @@ tailwind.config = {
     background:radial-gradient(circle at 30% 22%, #2a2a30 0%, #17171a 60%, #101012 100%); }
   .profile-inner::after { content:''; position:absolute; inset:0; pointer-events:none;
     background:linear-gradient(120deg, rgba(255,255,255,.14) 0%, transparent 30%, transparent 70%, rgba(201,169,106,.10) 100%); }
-  .profile-img { width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:1/1.12; }
-  .profile-fallback { width:100%; aspect-ratio:1/1.12; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; }
+  .profile-img { width:100%; height:100%; object-fit:cover; display:block; aspect-ratio:1/1.12; border-radius:1rem; }
   .profile-frame { width:min(20rem, calc(100vw - 3rem)); }
   .profile-tilt { max-width:calc(100vw - 2rem); }
   .profile-orbit { top:50%; left:50%; aspect-ratio:1; height:auto; translate:-50% -50%; }
@@ -201,12 +200,7 @@ tailwind.config = {
         <!-- Metallic gold frame + real <img> container -->
         <div class="profile-frame relative w-64 h-auto sm:w-80">
           <div class="profile-inner">
-            <img src="profile.jpg" alt="Dinushka Madhuranga" class="profile-img"
-                 onerror="this.style.display='none';document.getElementById('profileFallback').style.display='flex';">
-            <div id="profileFallback" class="profile-fallback" style="display:none;">
-              <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="#C9A96A" stroke-width="1.2" class="opacity-80"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.5-6.5 8-6.5s8 2.5 8 6.5"/></svg>
-              <span class="font-display font-bold text-xl gold-grad tracking-widest">D M</span>
-            </div>
+            <img src="Dinushka.png" alt="Dinushka Madhuranga" class="profile-img">
           </div>
         </div>
         <span class="corner-chip left-0 sm:-left-2 top-8 bg-smoke/85 border border-gold/40 text-gold float-slow" style="animation-delay:-2s;">AUTODESK REVIT</span>
